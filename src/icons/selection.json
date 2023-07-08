@@ -1,0 +1,130 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M1277.421 21.492c-2.112-9.335-9.21-16.859-18.611-19.717-16.813-3.232-34.214-2.035-50.394 3.467 0 0-1121.477 391.183-1185.526 434.498-13.759 9.315-18.399 14.749-20.692 21.114-11.093 31.050 23.412 44.402 23.412 44.402l289.048 91.391c4.888 0.851 9.913 0.567 14.666-0.828 65.702-40.314 661.294-405.414 695.905-417.679 5.331-1.553 9.434 0 8.371 3.881-13.76 46.835-528.447 490.49-531.274 493.185-2.797 2.221-4.243 5.67-3.839 9.158l-26.985 273.862c0 0-11.306 85.235 76.528 0 62.289-60.493 122.070-110.592 151.939-134.963 99.405 66.605 206.33 140.243 252.461 178.797 15.68 14.726 36.858 22.63 58.662 21.894 27.213-3.219 49.536-22.445 56.051-48.288 0 0 204.256-798.147 211.078-905.064 0.698-10.35 1.6-17.181 1.709-24.374 0.333-8.318-0.512-16.641-2.509-24.737z"
+        ],
+        "attrs": [
+          {
+            "fill": "rgb(20, 168, 157)"
+          }
+        ],
+        "width": 1280,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": ["telegram"]
+      },
+      "attrs": [
+        {
+          "fill": "rgb(20, 168, 157)"
+        }
+      ],
+      "properties": {
+        "order": 4,
+        "id": 0,
+        "name": "telegram",
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 14,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M1024 513.285c0-283.334-229.376-513.285-512-513.285s-512 229.951-512 513.285c0 248.428 176.128 455.281 409.6 503.014v-349.030h-102.4v-153.984h102.4v-128.323c0-99.064 80.384-179.649 179.2-179.649h128v153.985h-102.4c-28.16 0-51.2 23.098-51.2 51.329v102.659h153.6v153.984h-153.6v356.731c258.56-25.667 460.8-244.321 460.8-510.715z"
+        ],
+        "attrs": [
+          {
+            "fill": "rgb(20, 168, 157)"
+          }
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": ["facebook"],
+        "colorPermutations": {
+          "20168157123223223212552552551": [
+            {
+              "f": 0
+            }
+          ]
+        }
+      },
+      "attrs": [
+        {
+          "fill": "rgb(20, 168, 157)"
+        }
+      ],
+      "properties": {
+        "order": 5,
+        "id": 5,
+        "name": "facebook",
+        "prevSize": 32
+      },
+      "setIdx": 5,
+      "setId": 9,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M1024 590.444l-512-397.426-512 397.428v-162.038l512-397.426 512 397.428zM896 576v384h-256v-256h-256v256h-256v-384l384-288z"
+        ],
+        "tags": ["home", "house"],
+        "defaultCode": 59648,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "home, house",
+        "name": "home",
+        "order": 2,
+        "id": 1,
+        "prevSize": 32
+      },
+      "setIdx": 13,
+      "setId": 1,
+      "iconIdx": 0
+    }
+  ],
+  "height": 1024,
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "name": "icomoon",
+      "autoHost": true
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16,
+    "quickUsageToken": {
+      "UntitledProject": "MTE2MzhlYWY1YzJmZDM5ODg3MjY0NjcwNDYzMzcxMzEjMSMxNjY5NjQxNTE2IyMjZjRhNDNhZTU2ZDcw"
+    }
+  }
+}

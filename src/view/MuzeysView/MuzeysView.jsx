@@ -1,0 +1,28 @@
+import Image from "next/image";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+
+import Container from "@/components/Container/Container";
+import { muzeys } from "@/view/MuzeysView/config";
+
+const MuzeysView = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div>
+      <Container>
+        <div className="grid grid-cols-1  gap-8 sm:grid-cols-2  md:grid-cols-3">
+          {muzeys.map((item) => (
+            <Link href={item.href} key={item.id}>
+              <Image className="w-full h-64" src={item.src} alt={item.text} />
+              <h2 className="my-2 lg:my-4">{t(item.title)}</h2>
+              <p>{item.text}</p>
+            </Link>
+          ))}
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+export default MuzeysView;

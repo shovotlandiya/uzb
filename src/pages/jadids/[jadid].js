@@ -1,18 +1,18 @@
 import { useRouter } from "next/router";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { genders } from "@/data";
+import { jadids } from "@/data";
 
 import UniversalPage from "@/components/UneversalPage";
 
-export default function Gender() {
+export default function Jadid() {
   const router = useRouter();
   const { query } = router;
-  const { gender } = query;
+  const { jadid } = query;
 
-  if (!gender) return null;
+  if (!jadid) return null;
 
-  const data = genders[gender];
+  const data = jadids[jadid];
 
   return (
     <UniversalPage

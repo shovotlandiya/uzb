@@ -1,18 +1,18 @@
 import { useRouter } from "next/router";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { genders } from "@/data";
+import { muzeys } from "@/data";
 
 import UniversalPage from "@/components/UneversalPage";
 
-export default function Gender() {
+export default function Muzeys() {
   const router = useRouter();
   const { query } = router;
-  const { gender } = query;
+  const { muzey } = query;
 
-  if (!gender) return null;
+  if (!muzey) return null;
 
-  const data = genders[gender];
+  const data = muzeys[muzey];
 
   return (
     <UniversalPage

@@ -12,5 +12,7 @@ module.exports = {
     "gender",
     "jadids",
     "genderInner",
+    "jadidsInner",
+    "muzeysInner",
   ],
 };

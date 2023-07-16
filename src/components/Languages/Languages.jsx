@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import cn from "classnames";
 
-const Language = ({ language, languages = ["uz", "ru", "en"] }) => {
+const Language = ({ language, display, languages = ["uz", "ru", "en"] }) => {
   const { i18n } = useTranslation();
   const router = useRouter();
   const { pathname, asPath, query } = router;
@@ -20,7 +20,12 @@ const Language = ({ language, languages = ["uz", "ru", "en"] }) => {
 
   return (
     <div>
-      <span className="flex gap-4 ">
+      <span
+        className={cn({
+          ["flex gap-2"]: true,
+          ["hidden lg:flex"]: Boolean(display),
+        })}
+      >
         {languages.map((lang) => (
           <span
             className="uppercase cursor-pointer language

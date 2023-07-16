@@ -7,7 +7,7 @@ import { useTranslation } from "next-i18next";
 import Container from "@/components/Container";
 import NavLink from "@/components/NavLink";
 import Language from "@/components/Languages/Languages";
-import Swiper from "@/components/Swiper";
+
 import MobileMenu from "@/components/MobileMenu/MobileMenu";
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scrool", changeNavbarColor);
   }, []);
 
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -36,17 +36,17 @@ const Navbar = () => {
           [" bg-white/80"]: Boolean(backChange),
         })}
       >
-        <Container className="flex flex-col md:flex-row md:items-center justify-between py-5 ">
-          <div className="md:flex items-center">
+        <Container className="flex flex-col lg:flex-row lg:items-center justify-between py-5 ">
+          <div className="lg:flex items-center">
             <div className="flex justify-between">
               <Link href="/">
                 <Image src="/logo.svg" alt="Site Logo" width={40} height={40} />
               </Link>
-              <span onClick={() => setOpen(!open)} className="md:hidden">
+              <span onClick={() => setOpen(!open)} className=" lg:hidden">
                 burger
               </span>
             </div>
-            <ul className="hidden md:flex flex-col md:flex-row md:items-center">
+            <ul className="hidden lg:flex flex-col lg:flex-row lg:items-center">
               <NavLink href="/muzeys" className="navItem">
                 {t("navbar:muzeys")}
               </NavLink>
@@ -61,12 +61,11 @@ const Navbar = () => {
               </NavLink>
             </ul>
           </div>
-          <Language />
+          <Language display={true} />
         </Container>
-        {/* {open && <MobileMenu className="-translate-x-full" />} */}
+
         <MobileMenu className={{ "-translate-x-full": open }} />
       </nav>
-      {/* <Swiper /> */}
     </>
   );
 };

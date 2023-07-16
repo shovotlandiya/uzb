@@ -14,10 +14,14 @@ const UniversalPage = ({ title, desc, secondDesc }) => {
   return (
     <div>
       <Container>
-        <h2 className="my-8 font-bold text-3xl">{t(title)}</h2>
-        <p className="text-xl">{t(desc)}</p>
-        <div className="flex items-center justify-between">
-          <p className="text-xl">{t(secondDesc)}</p>
+        <h2 className="my-8 font-bold text-2xl sm:text-3xl">{t(title)}</h2>
+        <p className=" text-base leading-6 sm:text-lg sm:leading-8">
+          {t(desc)}
+        </p>
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <p className="text-base leading-6 sm:text-lg sm:leading-8">
+            {t(secondDesc)}
+          </p>
           <Image className="h-96 w-full" src={Rectangle} alt="rectangle" />
         </div>
       </Container>

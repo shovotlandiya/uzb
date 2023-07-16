@@ -1,4 +1,5 @@
 import Slider from "../../../public/slider.png";
+// import History from "../../../public/image.jpeg";
 
 export const slider = [
   {

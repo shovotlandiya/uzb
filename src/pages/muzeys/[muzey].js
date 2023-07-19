@@ -19,6 +19,12 @@ export default function Muzeys() {
       title={data.title}
       desc={data.description}
       secondDesc={data.description2}
+      src={data.src}
+      initialSrc={data.src}
+      hasSrc={true}
+      linkto360={data.href}
+      hasLink={true}
+      text360={data.text360}
     />
   );
 }

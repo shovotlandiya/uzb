@@ -1,5 +1,6 @@
 import Slider from "../../../public/slider.png";
-// import History from "../../../public/image.jpeg";
+import AmirTemur from "../../../public/2.png";
+import Museum from "../../../public/3.png";
 
 export const slider = [
   {
@@ -8,14 +9,10 @@ export const slider = [
   },
   {
     id: 2,
-    src: Slider,
+    src: AmirTemur,
   },
   {
     id: 3,
-    src: Slider,
-  },
-  {
-    id: 4,
-    src: Slider,
+    src: Museum,
   },
 ];

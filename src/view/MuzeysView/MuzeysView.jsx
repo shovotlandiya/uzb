@@ -16,7 +16,9 @@ const MuzeysView = () => {
             <Link href={item.href} key={item.id}>
               <Image className="w-full h-64" src={item.src} alt={item.text} />
               <h2 className="my-2 lg:my-4">{t(item.title)}</h2>
-              <p>{item.text}</p>
+              <Link className="z-100" href="http://360.vrmuseum.uz/museum5">
+                {item.text}
+              </Link>
             </Link>
           ))}
         </div>

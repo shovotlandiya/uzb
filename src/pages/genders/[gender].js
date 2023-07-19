@@ -19,6 +19,7 @@ export default function Gender() {
       title={data.title}
       desc={data.description}
       secondDesc={data.description2}
+      src={data.image}
     />
   );
 }

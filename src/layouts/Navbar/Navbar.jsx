@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import cn from "classnames";
 import { useTranslation } from "next-i18next";
+import Icon from "@/icons/Icon";
 
 import Container from "@/components/Container";
 import NavLink from "@/components/NavLink";
@@ -42,9 +43,19 @@ const Navbar = () => {
               <Link href="/">
                 <Image src="/logo.svg" alt="Site Logo" width={40} height={40} />
               </Link>
-              <span onClick={() => setOpen(!open)} className=" lg:hidden">
-                burger
-              </span>
+              {open && (
+                <span onClick={() => setOpen(!open)} className="lg:hidden">
+                  X
+                </span>
+              )}
+              {!open && (
+                <Icon
+                  onClick={() => setOpen(!open)}
+                  icon="menu"
+                  size={32}
+                  className="hover:text-primary ease-in duration-300 active:text-primary"
+                />
+              )}
             </div>
             <ul className="hidden lg:flex flex-col lg:flex-row lg:items-center">
               <NavLink href="/muzeys" className="navItem">
@@ -64,7 +75,7 @@ const Navbar = () => {
           <Language display={true} />
         </Container>
 
-        <MobileMenu className={{ "-translate-x-full": open }} />
+        <MobileMenu className={{ "-translate-x-full": !open }} />
       </nav>
     </>
   );

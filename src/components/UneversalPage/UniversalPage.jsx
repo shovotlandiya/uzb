@@ -1,19 +1,31 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
 import Container from "@/components/Container";
 
-import Rectangle from "../../../public/gender.png";
+import Rectangle from "../../../public/muzey.png";
 
-const UniversalPage = ({ title, desc, secondDesc }) => {
+const UniversalPage = ({
+  title,
+  desc,
+  secondDesc,
+  src,
+  initialSrc,
+  hasSrc,
+  linkto360,
+  hasLink,
+  text360,
+}) => {
   const { t } = useTranslation();
-
-  console.log(title);
 
   return (
     <div>
       <Container>
+        {hasSrc && (
+          <Image className="w-full md:h-96" src={Rectangle} alt={initialSrc} />
+        )}
         <h2 className="my-8 font-bold text-2xl sm:text-3xl">{t(title)}</h2>
         <p className=" text-base leading-6 sm:text-lg sm:leading-8">
           {t(desc)}
@@ -22,8 +34,13 @@ const UniversalPage = ({ title, desc, secondDesc }) => {
           <p className="text-base leading-6 sm:text-lg sm:leading-8">
             {t(secondDesc)}
           </p>
-          <Image className="h-96 w-full" src={Rectangle} alt="rectangle" />
+          <Image className="h-96 w-full" src={src} alt="rectangle" />
         </div>
+        {hasLink && (
+          <Link className="text-primary block my-2 md:my-4 text-lg  md:text-2xl" href={linkto360}>
+            {t(text360)}
+          </Link>
+        )}
       </Container>
     </div>
   );

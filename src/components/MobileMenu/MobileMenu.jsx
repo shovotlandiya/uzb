@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import NavLink from "@/components/NavLink";
 
-const MobileMenu = ({ className }) => {
+const MobileMenu = ({ className, setIsOpen }) => {
   const { t } = useTranslation();
 
   return (
@@ -19,22 +19,38 @@ const MobileMenu = ({ className }) => {
       )}
     >
       <div className="w-full">
-        <NavLink href="/">
+        <NavLink onClick={() => setIsOpen(false)} href="/">
           <Image src="/logo.svg" alt="Site Logo" width={40} height={40} />
         </NavLink>
       </div>
       <div className="w-full grow">
-        <ul className="flex flex-col ">
-          <NavLink href="/muzeys" className="navItem">
+        <ul className="flex flex-col">
+          <NavLink
+            onClick={() => setIsOpen(false)}
+            href="/muzeys"
+            className="navItem"
+          >
             {t("navbar:muzeys")}
           </NavLink>
-          <NavLink href="/genders" className="navItem">
+          <NavLink
+            onClick={() => setIsOpen(false)}
+            href="/genders"
+            className="navItem"
+          >
             {t("navbar:genders")}
           </NavLink>
-          <NavLink href="/jadids" className="navItem">
+          <NavLink
+            onClick={() => setIsOpen(false)}
+            href="/jadids"
+            className="navItem"
+          >
             {t("navbar:jadids")}
           </NavLink>
-          <NavLink href="/about" className="navItem">
+          <NavLink
+            onClick={() => setIsOpen(false)}
+            href="/about"
+            className="navItem"
+          >
             {t("navbar:about")}
           </NavLink>
         </ul>

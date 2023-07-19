@@ -3,7 +3,12 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import cn from "classnames";
 
-const Language = ({ language, display, languages = ["uz", "ru", "en"] }) => {
+const Language = ({
+  language,
+  display,
+  setIsOpen,
+  languages = ["uz", "ru", "en"],
+}) => {
   const { i18n } = useTranslation();
   const router = useRouter();
   const { pathname, asPath, query } = router;
@@ -32,7 +37,7 @@ const Language = ({ language, display, languages = ["uz", "ru", "en"] }) => {
             "
             key={lang}
             tabIndex={1}
-            onClick={() => handleChange(lang)}
+            onClick={() => setLanguageState(lang)}
           >
             {lang}
           </span>

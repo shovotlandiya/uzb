@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import cn from "classnames";
 import { useTranslation } from "next-i18next";
 import Icon from "@/icons/Icon";
+import { useLockBodyScrool } from "@/hooks/useLockBodyScroll";
 
 import Container from "@/components/Container";
 import NavLink from "@/components/NavLink";
@@ -14,6 +15,8 @@ import MobileMenu from "@/components/MobileMenu/MobileMenu";
 const Navbar = () => {
   const [backChange, setBackChange] = useState(false);
   const [open, setOpen] = useState(false);
+
+  useLockBodyScrool(open);
 
   useEffect(() => {
     const changeNavbarColor = () => {
@@ -41,21 +44,15 @@ const Navbar = () => {
           <div className="lg:flex items-center">
             <div className="flex justify-between">
               <Link href="/">
-                <Image src="/logo.svg" alt="Site Logo" width={40} height={40} />
+                <Image src="/logo.svg" alt="Site Logo" width={45} height={45} />
               </Link>
-              {open && (
-                <span onClick={() => setOpen(!open)} className="lg:hidden">
-                  X
-                </span>
-              )}
-              {!open && (
-                <Icon
-                  onClick={() => setOpen(!open)}
-                  icon="menu"
-                  size={32}
-                  className="hover:text-primary ease-in duration-300 active:text-primary"
-                />
-              )}
+              <span onClick={() => setOpen(!open)} className="lg:hidden">
+                {open ? (
+                  <Icon icon="x" size={48} />
+                ) : (
+                  <Icon icon="burger" size={40} />
+                )}
+              </span>
             </div>
             <ul className="hidden lg:flex flex-col lg:flex-row lg:items-center">
               <NavLink href="/muzeys" className="navItem">
@@ -72,10 +69,13 @@ const Navbar = () => {
               </NavLink>
             </ul>
           </div>
-          <Language display={true} />
+          <Language Open={setOpen} display={true} />
         </Container>
 
-        <MobileMenu className={{ "-translate-x-full": !open }} />
+        <MobileMenu
+          setIsOpen={setOpen}
+          className={{ "-translate-x-full": !open }}
+        />
       </nav>
     </>
   );

@@ -37,7 +37,7 @@ const Language = ({
             "
             key={lang}
             tabIndex={1}
-            onClick={() => setLanguageState(lang)}
+            onClick={() => handleChange(lang)}
           >
             {lang}
           </span>

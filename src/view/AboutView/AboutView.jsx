@@ -8,7 +8,7 @@ const AboutView = () => {
   return (
     <div>
       <Container>
-        <p className="text-2xl font-thin leading-10">{t("about:about")}</p>
+        <p className="text-2xl font-thin leading-10 mt-2">{t("about:about")}</p>
       </Container>
     </div>
   );

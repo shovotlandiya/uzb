@@ -5,7 +5,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className="min-h-screen h-full w-full flex flex-col">
       <Navbar />
-      <section className="w-full grow flex flex-col mt-28 mb-10">
+      <section className="w-full grow flex flex-col mt-24 mb-10">
         {children}
       </section>
       <Footer />

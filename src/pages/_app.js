@@ -4,20 +4,21 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import "@/utils/i18n";
-import { appWithTranslation } from "next-i18next";
-
 import MediaQueryProvider from "@/context/MediaQueryProvider";
+import { LanguageProvider } from "@/context/LanguageProvider";
+
 import MainLayout from "@/layouts/MainLayout/MainLayout";
 
 const App = ({ Component, pageProps }) => {
   return (
     <MediaQueryProvider>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      <LanguageProvider>
+        <MainLayout>
+          <Component {...pageProps} />
+        </MainLayout>
+      </LanguageProvider>
     </MediaQueryProvider>
   );
 };
 
-export default appWithTranslation(App);
+export default App;

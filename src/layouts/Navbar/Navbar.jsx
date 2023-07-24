@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import cn from "classnames";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/hooks/useTranslation";
 import Icon from "@/icons/Icon";
 import { useLockBodyScrool } from "@/hooks/useLockBodyScroll";
 

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Icon from "@/icons/Icon";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import Container from "@/components/Container";
 
 const Footer = () => {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import Container from "@/components/Container";
 
@@ -37,7 +37,10 @@ const UniversalPage = ({
           <Image className="h-96 w-full" src={src} alt="rectangle" />
         </div>
         {hasLink && (
-          <Link className="text-primary block my-2 md:my-4 text-lg  md:text-2xl" href={linkto360}>
+          <Link
+            className="text-primary block my-2 md:my-4 text-lg  md:text-2xl"
+            href={linkto360}
+          >
             {t(text360)}
           </Link>
         )}
@@ -47,7 +50,3 @@ const UniversalPage = ({
 };
 
 export default UniversalPage;
-
-export const getServerSideProps = async ({ locale }) => {
-  return { props: { ...(await serverSideTranslations(locale)) } };
-};

@@ -1,5 +1,4 @@
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/hooks/useTranslation";
 import Link from "next/link";
 
 import Container from "@/components/Container";
@@ -96,10 +95,6 @@ const Home = () => {
       </Container>
     </div>
   );
-};
-
-export const getServerSideProps = async ({ locale }) => {
-  return { props: { ...(await serverSideTranslations(locale)) } };
 };
 
 export default Home;

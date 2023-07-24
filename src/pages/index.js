@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <div>
-      <Slider navigationClassName={true} className="my-4">
+      <Slider autoplay={true} className="my-4">
         {slider.map((slide) => (
           <div key={slide.id}>
             <Image className="w-full" src={slide.src} alt={slide.src} />

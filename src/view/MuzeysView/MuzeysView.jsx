@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import Container from "@/components/Container/Container";
 import { muzeys } from "@/view/MuzeysView/config";

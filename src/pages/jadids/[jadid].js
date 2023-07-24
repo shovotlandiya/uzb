@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { jadids } from "@/data";
 
 import UniversalPage from "@/components/UneversalPage";
@@ -23,7 +22,3 @@ export default function Jadid() {
     />
   );
 }
-
-export const getServerSideProps = async ({ locale }) => {
-  return { props: { ...(await serverSideTranslations(locale)) } };
-};

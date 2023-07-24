@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/hooks/useTranslation";
 import cn from "classnames";
 
 const Language = ({
@@ -9,7 +9,7 @@ const Language = ({
   setIsOpen,
   languages = ["uz", "ru", "en"],
 }) => {
-  const { i18n } = useTranslation();
+  const { changeLanguage } = useTranslation();
   const router = useRouter();
   const { pathname, asPath, query } = router;
 
@@ -20,7 +20,7 @@ const Language = ({
 
     router.push({ pathname, query }, asPath, { locale: lang });
 
-    return i18n.changeLanguage(lang);
+    return changeLanguage(lang);
   };
 
   return (

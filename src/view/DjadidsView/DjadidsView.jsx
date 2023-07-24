@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import Container from "@/components/Container/Container";
 import NavLink from "@/components/NavLink";

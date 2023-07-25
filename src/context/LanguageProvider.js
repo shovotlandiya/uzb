@@ -3,7 +3,7 @@ import React from "react";
 const LanguageContext = React.createContext(null);
 
 const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = React.useState("en");
+  const [language, setLanguage] = React.useState("uz");
 
   React.useState(() => {
     if (typeof window !== "undefined") {

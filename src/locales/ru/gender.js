@@ -9,7 +9,7 @@ export const gender = {
   beruniy: "Абу Райхан Беруни",
   yassaviy: "Ахмед Яссави",
   maturudiy: "Абу Наср аль Мотуруди",
-  termiziy: "Abdulloh al-Hakim t-Termiziy",
-  temur: "Amir Temur",
+  termiziy: "Абдулло аль-Хаким ат-Термизий",
+  temur: "Амир Темур",
   xorazmiy: "аль-Хорезми",
 };

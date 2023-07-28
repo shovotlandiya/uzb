@@ -26,12 +26,12 @@ const UniversalPage = ({
         {hasSrc && (
           <Image className="w-full md:h-96" src={Rectangle} alt={initialSrc} />
         )}
-        <h2 className="my-8 font-bold text-2xl sm:text-3xl">{t(title)}</h2>
-        <p className=" text-base leading-6 sm:text-lg sm:leading-8">
+        <h2 className="my-8 font-bold text-2xl sm:text-3xl ">{t(title)}</h2>
+        <p className=" text-base leading-6 sm:text-lg sm:leading-8 text-justify">
           {t(desc)}
         </p>
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <p className="text-base leading-6 sm:text-lg sm:leading-8">
+        <div className="flex flex-col gap-6 lg:flex-row items-center justify-between">
+          <p className="text-base leading-6 sm:text-lg sm:leading-8 text-justify">
             {t(secondDesc)}
           </p>
           <Image className="h-96 w-full" src={src} alt="rectangle" />

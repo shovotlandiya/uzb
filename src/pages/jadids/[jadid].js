@@ -4,12 +4,10 @@ import { jadids } from "@/data";
 
 import UniversalPage from "@/components/UneversalPage";
 
-export default function Jadid() {
+const Jadid = ({ jadids }) => {
   const router = useRouter();
   const { query } = router;
   const { jadid } = query;
-
-  if (!jadid) return null;
 
   const data = jadids[jadid];
 
@@ -21,4 +19,25 @@ export default function Jadid() {
       src={data.image}
     />
   );
-}
+};
+
+export const getStaticPaths = async () => {
+  const params = Object.keys(jadids);
+
+  const paths = params.map((param) => `/jadids/${param}`);
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      jadids,
+    },
+  };
+};
+
+export default Jadid;

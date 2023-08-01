@@ -4,12 +4,10 @@ import { genders } from "@/data";
 
 import UniversalPage from "@/components/UneversalPage";
 
-export default function Gender() {
+const Gender = ({ genders }) => {
   const router = useRouter();
   const { query } = router;
   const { gender } = query;
-
-  if (!gender) return null;
 
   const data = genders[gender];
 
@@ -21,4 +19,25 @@ export default function Gender() {
       src={data.image}
     />
   );
-}
+};
+
+export const getStaticPaths = async () => {
+  const params = Object.keys(genders);
+
+  const paths = params.map((param) => `/genders/${param}`);
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      genders,
+    },
+  };
+};
+
+export default Gender;

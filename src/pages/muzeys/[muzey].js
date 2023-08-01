@@ -4,12 +4,10 @@ import { muzeys } from "@/data";
 
 import UniversalPage from "@/components/UneversalPage";
 
-export default function Muzeys() {
+const Muzeys = ({ muzeys }) => {
   const router = useRouter();
   const { query } = router;
   const { muzey } = query;
-
-  if (!muzey) return null;
 
   const data = muzeys[muzey];
 
@@ -26,4 +24,25 @@ export default function Muzeys() {
       text360={data.text360}
     />
   );
-}
+};
+
+export const getStaticPaths = async () => {
+  const params = Object.keys(muzeys);
+
+  const paths = params.map((param) => `/muzeys/${param}`);
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      muzeys,
+    },
+  };
+};
+
+export default Muzeys;

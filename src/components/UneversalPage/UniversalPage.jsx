@@ -35,16 +35,7 @@ const UniversalPage = ({
           <p className="text-base leading-6 sm:text-lg sm:leading-8 text-justify">
             {t(secondDesc)}
           </p>
-          <Image
-            src={src}
-            alt="rectangle"
-            style={{
-              objectFit: "cover",
-              minWidth: "300px",
-              maxHeight: "600px",
-              height: "auto",
-            }}
-          />
+          <Image className="w-full h-96" src={src} alt="rectangle" />
         </div>
         {hasLink && (
           <Link

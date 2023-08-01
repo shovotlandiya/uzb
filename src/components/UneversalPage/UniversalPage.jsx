@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/hooks/useTranslation";
+import parser from "html-react-parser";
 
 import Container from "@/components/Container";
 
@@ -28,7 +29,7 @@ const UniversalPage = ({
         )}
         <h2 className="my-8 font-bold text-2xl sm:text-3xl ">{t(title)}</h2>
         <p className=" text-base leading-6 sm:text-lg sm:leading-8 text-justify">
-          {t(desc)}
+          {parser(t(desc))}
         </p>
         <div className="flex flex-col gap-6 lg:flex-row items-center justify-between">
           <p className="text-base leading-6 sm:text-lg sm:leading-8 text-justify">

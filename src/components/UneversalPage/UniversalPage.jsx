@@ -31,7 +31,7 @@ const UniversalPage = ({
         <p className=" text-base leading-6 sm:text-lg sm:leading-8 text-justify">
           {parser(t(desc))}
         </p>
-        <div className="flex flex-col gap-6 lg:flex-row items-center justify-between">
+        <div className="flex flex-col gap-6 lg:flex-row  justify-between">
           <p className="text-base leading-6 sm:text-lg sm:leading-8 text-justify">
             {t(secondDesc)}
           </p>

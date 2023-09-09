@@ -4,7 +4,7 @@ export const muzeys = {
   tabiat: "State Nature Museum of Uzbekistan",
   sanat: "State Art Museum of Uzbekistan",
   tarix: "State Museum of the History of Timurids",
-  xotira: "Qatag‘on qurbonlari xotirasi muzeyi",
+  xotira: "Qatag'on qurbonlari xotirasi muzeyi",
   "qiroliy-kuchlar": "Armed Forces Museum",
   "shon-sharaf": "Museum of Honor",
   "temir-yol": "Railway History Museum",
